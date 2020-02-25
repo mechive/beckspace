@@ -1,0 +1,23 @@
+{
+  "name": "beckspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass":"node-sass -w scss/ -o css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mickbeck/beckspace.git"
+  },
+  "author": "Mike Beckett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mickbeck/beckspace/issues"
+  },
+  "homepage": "https://github.com/mickbeck/beckspace#readme",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

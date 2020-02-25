@@ -1,0 +1,162 @@
+body {
+  background-color: black;
+  padding: 1%;
+  border: 1px blue solid; }
+  body .container {
+    background-color: #1a1a1a;
+    padding: 1%;
+    border: 1px blue solid; }
+    body .container header {
+      background-color: #333333;
+      padding: 1%;
+      border: 1px blue solid;
+      margin: 1% 0%;
+      display: flex;
+      align-items: center; }
+      body .container header .name {
+        flex: 1;
+        background-color: #4d4d4d;
+        padding: 1%;
+        border: 1px blue solid; }
+        body .container header .name h1 {
+          background-color: #666666;
+          padding: 1%;
+          border: 1px blue solid; }
+      body .container header nav {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        background-color: #4d4d4d;
+        padding: 1%;
+        border: 1px blue solid; }
+        body .container header nav a {
+          background-color: #666666;
+          padding: 1%;
+          border: 1px blue solid; }
+    body .container main {
+      margin: 1% 0%;
+      background-color: #333333;
+      padding: 1%;
+      border: 1px blue solid;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      body .container main .card-wrapper {
+        background-color: #4d1a1a;
+        padding: 1%;
+        border: 1px blue solid;
+        width: 50%; }
+        body .container main .card-wrapper .card {
+          flex: 1;
+          margin: 0% 5%;
+          background-color: #666666;
+          padding: 1%;
+          border: 1px blue solid; }
+        body .container main .card-wrapper .card-title-wrapper {
+          background-color: #666600;
+          padding: 1%;
+          border: 1px blue solid; }
+          body .container main .card-wrapper .card-title-wrapper h1 {
+            background-color: gray;
+            padding: 1%;
+            border: 1px blue solid; }
+          body .container main .card-wrapper .card-title-wrapper p {
+            width: 20%;
+            background-color: gray;
+            padding: 1%;
+            border: 1px blue solid; }
+        body .container main .card-wrapper .card-content-wrapper {
+          background-color: #666666;
+          padding: 1%;
+          border: 1px blue solid;
+          display: flex; }
+          body .container main .card-wrapper .card-content-wrapper .img-wrapper {
+            background-color: gray;
+            padding: 1%;
+            border: 1px blue solid;
+            width: 200px;
+            height: 200px;
+            overflow: hidden; }
+            body .container main .card-wrapper .card-content-wrapper .img-wrapper img {
+              background-color: #999999;
+              padding: 1%;
+              border: 1px blue solid;
+              width: 98%;
+              height: 100%; }
+          body .container main .card-wrapper .card-content-wrapper .txt-wrapper {
+            flex: 2;
+            background-color: gray;
+            padding: 1%;
+            border: 1px blue solid; }
+            body .container main .card-wrapper .card-content-wrapper .txt-wrapper p {
+              background-color: #999999;
+              padding: 1%;
+              border: 1px blue solid; }
+        body .container main .card-wrapper .card-button-wrapper {
+          background-color: #666666;
+          padding: 1%;
+          display: flex;
+          border: 1px blue solid; }
+          body .container main .card-wrapper .card-button-wrapper .left {
+            background-color: gray;
+            padding: 1%;
+            display: flex;
+            flex: 1;
+            border: 1px blue solid; }
+            body .container main .card-wrapper .card-button-wrapper .left button {
+              background-color: #999999;
+              padding: 1%;
+              border: 1px blue solid; }
+              body .container main .card-wrapper .card-button-wrapper .left button i {
+                font-size: 2rem;
+                border: 1px blue solid; }
+          body .container main .card-wrapper .card-button-wrapper .right {
+            background-color: gray;
+            padding: 1%;
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            border: 1px blue solid; }
+            body .container main .card-wrapper .card-button-wrapper .right button {
+              background-color: #999999;
+              padding: 1%;
+              border: 1px blue solid; }
+              body .container main .card-wrapper .card-button-wrapper .right button i {
+                font-size: 2rem;
+                border: 1px blue solid; }
+      body .container main #card-row {
+        display: flex;
+        flex-direction: row; }
+      body .container main #card-column {
+        display: flex;
+        flex-direction: column; }
+    body .container footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 1% 0%;
+      background-color: #333333;
+      padding: 1%;
+      border: 1px blue solid; }
+      body .container footer .txt-wrapper {
+        flex: 1;
+        background-color: #4d4d4d;
+        padding: 1%;
+        border: 1px blue solid; }
+        body .container footer .txt-wrapper p {
+          background-color: #666666;
+          padding: 1%;
+          border: 1px blue solid; }
+      body .container footer .links {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        background-color: #4d4d4d;
+        padding: 1%;
+        border: 1px blue solid; }
+        body .container footer .links i {
+          background-color: #666666;
+          padding: 1%;
+          font-size: 2rem;
+          margin: 1%;
+          border: 1px blue solid; }
