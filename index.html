@@ -13,6 +13,18 @@
             <div class="name">
                 <h1>Beckspace.ca</h1>
             </div>
+            <div class="mobile-nav-button">
+                <i class="fas fa-bars mobile-nav-button-icon"></i>            
+            </div>
+            <div class="mobile-nav hide">
+                <div class="flex-wrapper">
+                    <a href="">Home</a>
+                    <a href="">About</a>
+                    <a href="">Themes</a>
+                    <a href="">Services</a>
+                    <a href="">Contact</a>
+                </div>
+            </div>
             <nav>
                 <a href="">Home</a>
                 <a href="">About</a>
@@ -22,7 +34,6 @@
             </nav>
         </header>
         <main>
-       
             <div id="card-row"class="card-wrapper">
                 <div class="card">
                     <i class="fab fa-github"></i>
@@ -34,7 +45,7 @@
                 </div>
                 <div class="card">
                     <i class="fab fa-github"></i>
-                    <p>Lorem</p>
+                    <p>lorem</p>
                 </div>
             </div>
             <div id="card-column"class="card-wrapper">
@@ -47,7 +58,7 @@
                         <img src="img/sand-1.jpg" alt="">
                     </div>
                     <div class="txt-wrapper">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quis obcaecati laudantium eaque dicta modi nihil repellat suscipit earum eos!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
                     </div>
                 </div>
@@ -78,7 +89,7 @@
         </main>
         <footer>
             <div class="txt-wrapper">
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <p>Lorem ipsum &copy;2020</p>
             </div>
             <div class="links">
                 <i class="fab fa-github"></i>
@@ -87,5 +98,15 @@
             </div>
         </footer>
     </div>
+    <script src="js\jQuery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".mobile-nav-button-icon").click(function(){
+                
+                $(".mobile-nav").toggle();
+  
+            });
+        });
+    </script>
 </body>
 </html>

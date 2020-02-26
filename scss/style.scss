@@ -1,6 +1,19 @@
-
+// Variables
 $border-color:blue;
 $padding-value:1%;
+.flex-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.hide{
+    display:none;
+}
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
 body{
     background-color: rgb(0%,0%,0%);
     padding:$padding-value;
@@ -27,6 +40,59 @@ body{
                     border: 1px $border-color solid;
                 }
             }
+            .mobile-nav-button{
+                display: none;
+                margin-left: auto;
+                flex: 1;
+                background-color: rgb(30%,30%,30%);
+                justify-content: flex-end;
+                padding:$padding-value;
+                border: 1px $border-color solid;
+                @media only screen and (max-width:630px){
+                    display: flex;
+                    position: relative;
+                    z-index: 10;
+                }
+                .mobile-nav-button-icon{
+                    font-size: 2rem;
+                    background-color: rgb(40%,40%,40%);
+                    padding:$padding-value;
+                    padding: 5%;
+                    border: 1px $border-color solid;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                }
+            }
+            .mobile-nav{
+                background-color: rgb(20%,20%,20%);
+                position: absolute;
+                height: 100vh;
+                width: 50%;
+                top: 0;
+                right: 0;
+                z-index: 5;
+                flex-direction: column;
+                align-items: center;
+                padding:$padding-value;
+                padding-top: 150px;
+                border: 1px $border-color solid;
+                @media only screen and (max-width:630px){
+                }
+                a{
+                    padding:$padding-value;
+                    background-color: rgb(30%,30%,30%);
+                    border: 1px $border-color solid;
+                    font-size: 2rem;
+                    color: white;
+                    text-decoration: none;
+                    width: 98%;
+                    &:hover{
+                        background-color: rgb(40%,40%,40%);
+                    }
+                }
+            }
             nav{
                 flex: 1;
                 display: flex;
@@ -34,6 +100,9 @@ body{
                 background-color: rgb(30%,30%,30%);
                 padding:$padding-value;
                 border: 1px $border-color solid;
+                @media only screen and (max-width:630px){
+                    display: none;
+                }
                 a{
                     background-color: rgb(40%,40%,40%);
                     padding:$padding-value;
@@ -54,6 +123,7 @@ body{
                 padding:$padding-value;
                 border: 1px $border-color solid;
                 width: 50%;
+                margin: 1% 0%;
                 display: flex;
                 justify-content: center;
                 @media only screen and (max-width:840px){
@@ -62,27 +132,41 @@ body{
                 @media only screen and (max-width:650px){
                     width: 100%;
                 }
-                @media only screen and (max-width:650px){
-                    width: 100%;
-                }
-               
                 .card{
-                    flex: 1;
                     display: flex;
                     justify-content: center;
                     flex-direction: column;
                     align-items: center;
                     margin: 0% 2%;
-                    padding: 0% 0%;
                     background-color: rgb(40%,40%,40%);
-                    padding:$padding-value;
+                    padding:1%;
                     border: 1px $border-color solid;
                     max-height: 100px;
                     min-height: 100px;
                     max-width: 100px;
                     min-width: 100px;
+                    @media only screen and (max-width:420px){
+                        max-height: 80px;
+                        min-height: 80px;
+                        max-width: 80px;
+                        min-width: 80px;
+                    }
+                    @media only screen and (max-width:340px){
+                        max-height: 70px;
+                        min-height: 70px;
+                        max-width: 70px;
+                        min-width: 70px;
+                        padding: 2%;
+                        p{
+                            margin: 0%;
+                        }
+                    }
                     i{
                         font-size: 2rem;
+                    }
+                    p{
+                        margin: 0%;
+                        margin-top: 1%;
                     }
                 }
                 .card-title-wrapper{
@@ -117,8 +201,6 @@ body{
                         max-height: 120px;
                         min-height: 120px;
                         word-wrap: none;
-
-                        // overflow: hidden;
                         img{
                             background-color: rgb(60%,60%,60%);
                             padding:$padding-value;
@@ -137,7 +219,7 @@ body{
                         border: 1px $border-color solid;
                         max-height: 120px;
                         display: flex;
-                        justify-content: center;
+                        justify-content: flex-start;
                         flex-direction: column;
                         p{
                             background-color: rgb(60%,60%,60%);
@@ -147,11 +229,6 @@ body{
                             max-height: 100px;
                             overflow: hidden;
                             margin: 1%;
-
-                            // &:last-of-type{
-                            //     margin-top:auto;
-                            // }
-
                         }
                     }
                 }
@@ -212,6 +289,7 @@ body{
             align-items: center;
             justify-content: space-between;
             margin: 1% 0%;
+            margin-top: auto;
             background-color: rgb(20%,20%,20%);
             padding:$padding-value;
             border: 1px $border-color solid;
