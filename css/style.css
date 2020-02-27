@@ -12,263 +12,415 @@ html {
   box-sizing: inherit; }
 
 body {
+  font-family: Arial, Helvetica, sans-serif;
   background-color: black;
-  padding: 1%;
-  border: 1px blue solid; }
-  body .container {
+  margin: 0%; }
+  body .mobile-nav {
     background-color: #1a1a1a;
+    position: fixed;
+    height: 100vh;
+    width: 75%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    flex-direction: column;
+    align-items: center;
     padding: 1%;
-    border: 1px blue solid; }
-    body .container header {
-      background-color: #333333;
+    padding-top: 150px; }
+    body .mobile-nav a {
       padding: 1%;
-      border: 1px blue solid;
-      margin: 1% 0%;
+      font-size: 1.7rem;
+      color: white;
+      margin: 5px 0px;
+      text-decoration: none;
+      text-align: center;
+      transition: ease-in 1s; }
+      body .mobile-nav a:hover {
+        background-color: #333333; }
+    body .mobile-nav .current {
       display: flex;
-      align-items: center; }
+      justify-content: center;
+      color: white; }
+    body .mobile-nav .current::before {
+      content: '{';
+      color: red; }
+    body .mobile-nav .current::after {
+      content: '}';
+      color: red; }
+  body .container {
+    background-color: #0d0d0d; }
+    body .container header {
+      background-color: #1a1a1a;
+      padding: 1%;
+      margin: 0% 0%;
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      transform: translateY(50%);
+      width: 60%;
+      position: relative;
+      z-index: 7; }
+      @media only screen and (max-width: 1120px) {
+        body .container header {
+          width: 80%; } }
+      @media only screen and (max-width: 350px) {
+        body .container header {
+          width: 95%; } }
       body .container header .name {
-        flex: 1;
-        background-color: #4d4d4d;
-        padding: 1%;
-        border: 1px blue solid; }
+        flex: 1; }
         body .container header .name h1 {
-          background-color: #666666;
-          padding: 1%;
-          border: 1px blue solid; }
+          margin: 0%;
+          color: white;
+          display: flex;
+          align-items: center; }
+          @media only screen and (max-width: 450px) {
+            body .container header .name h1 {
+              font-size: 1.7rem; } }
+          body .container header .name h1 i {
+            margin-right: 10px; }
       body .container header .mobile-nav-button {
         display: none;
         margin-left: auto;
         flex: 1;
-        background-color: #4d4d4d;
-        justify-content: flex-end;
-        padding: 1%;
-        border: 1px blue solid; }
-        @media only screen and (max-width: 630px) {
+        justify-content: flex-end; }
+        @media only screen and (max-width: 830px) {
           body .container header .mobile-nav-button {
             display: flex;
             position: relative;
             z-index: 10; } }
         body .container header .mobile-nav-button .mobile-nav-button-icon {
           font-size: 2rem;
-          background-color: #666666;
-          padding: 1%;
-          padding: 5%;
-          border: 1px blue solid;
           display: flex;
           align-items: center;
-          cursor: pointer; }
-      body .container header .mobile-nav {
-        background-color: #333333;
-        position: absolute;
-        height: 100vh;
-        width: 50%;
-        top: 0;
-        right: 0;
-        z-index: 5;
-        flex-direction: column;
-        align-items: center;
-        padding: 1%;
-        padding-top: 150px;
-        border: 1px blue solid; }
-        body .container header .mobile-nav a {
-          padding: 1%;
-          background-color: #4d4d4d;
-          border: 1px blue solid;
-          font-size: 2rem;
-          color: white;
-          text-decoration: none;
-          width: 98%; }
-          body .container header .mobile-nav a:hover {
-            background-color: #666666; }
+          cursor: pointer;
+          color: white; }
       body .container header nav {
         flex: 1;
         display: flex;
         justify-content: flex-end;
-        background-color: #4d4d4d;
-        padding: 1%;
-        border: 1px blue solid; }
-        @media only screen and (max-width: 630px) {
+        padding: 1%; }
+        @media only screen and (max-width: 830px) {
           body .container header nav {
             display: none; } }
         body .container header nav a {
-          background-color: #666666;
           padding: 1%;
-          border: 1px blue solid; }
-    body .container main {
-      margin: 1% 0%;
+          color: white;
+          text-decoration: none;
+          font-size: 1.2rem; }
+        body .container header nav .current {
+          display: flex;
+          color: white; }
+        body .container header nav .current::before {
+          content: '{';
+          color: red; }
+        body .container header nav .current::after {
+          content: '}';
+          color: red; }
+    body .container .banner {
       background-color: #333333;
       padding: 1%;
-      border: 1px blue solid;
+      height: 40vh;
+      background-image: url(../img/fresh-green-10.jpg);
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover; }
+    body .container main {
+      margin: 0% 0%;
+      background-color: #0d0d0d;
       display: flex;
       flex-direction: column;
       align-items: center; }
-      body .container main .card-wrapper {
-        background-color: #4d4d4d;
-        padding: 1%;
-        border: 1px blue solid;
-        width: 50%;
-        margin: 1% 0%;
+      body .container main #card-row {
         display: flex;
-        justify-content: center; }
-        @media only screen and (max-width: 840px) {
-          body .container main .card-wrapper {
-            width: 70%; } }
+        flex-direction: row;
+        justify-content: center;
+        transform: translateY(-50%);
+        background-color: transparent;
+        border: none;
+        width: 80%; }
         @media only screen and (max-width: 650px) {
-          body .container main .card-wrapper {
-            width: 100%; } }
-        body .container main .card-wrapper .card {
+          body .container main #card-row {
+            width: 90%; } }
+        @media only screen and (max-width: 340px) {
+          body .container main #card-row {
+            width: 95%; } }
+        body .container main #card-row .card {
           display: flex;
           justify-content: center;
           flex-direction: column;
           align-items: center;
-          margin: 0% 2%;
-          background-color: #666666;
-          padding: 1%;
-          border: 1px blue solid;
-          max-height: 100px;
-          min-height: 100px;
-          max-width: 100px;
-          min-width: 100px; }
-          @media only screen and (max-width: 420px) {
-            body .container main .card-wrapper .card {
+          margin: 0%;
+          background-color: #e6e6e6;
+          max-height: 150px;
+          min-height: 150px;
+          max-width: 200px;
+          min-width: 200px; }
+          body .container main #card-row .card:nth-child(2) {
+            margin: 0% 2%; }
+          @media only screen and (max-width: 820px) {
+            body .container main #card-row .card {
+              max-height: 100px;
+              min-height: 100px;
+              max-width: 150px;
+              min-width: 150px; } }
+          @media only screen and (max-width: 550px) {
+            body .container main #card-row .card {
+              max-height: 90px;
+              min-height: 90px;
+              max-width: 120px;
+              min-width: 120px; } }
+          @media only screen and (max-width: 450px) {
+            body .container main #card-row .card {
+              max-height: 90px;
+              min-height: 90px;
+              max-width: 100px;
+              min-width: 100px; } }
+          @media only screen and (max-width: 370px) {
+            body .container main #card-row .card {
               max-height: 80px;
               min-height: 80px;
-              max-width: 80px;
-              min-width: 80px; } }
-          @media only screen and (max-width: 340px) {
-            body .container main .card-wrapper .card {
-              max-height: 70px;
-              min-height: 70px;
-              max-width: 70px;
-              min-width: 70px;
-              padding: 2%; }
-              body .container main .card-wrapper .card p {
-                margin: 0%; } }
-          body .container main .card-wrapper .card i {
+              max-width: 90px;
+              min-width: 90px; } }
+          body .container main #card-row .card i {
             font-size: 2rem; }
-          body .container main .card-wrapper .card p {
+          body .container main #card-row .card p {
             margin: 0%;
             margin-top: 1%; }
-        body .container main .card-wrapper .card-title-wrapper {
-          background-color: #666666;
-          padding: 1%;
-          border: 1px blue solid; }
-          body .container main .card-wrapper .card-title-wrapper h1 {
-            background-color: gray;
+      body .container main #card-column {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        background-color: #e6e6e6;
+        border-radius: 5px; }
+        @media only screen and (max-width: 840px) {
+          body .container main #card-column {
+            width: 70%; } }
+        @media only screen and (max-width: 650px) {
+          body .container main #card-column {
+            width: 90%; } }
+        @media only screen and (max-width: 340px) {
+          body .container main #card-column {
+            width: 95%; } }
+        body .container main #card-column .card-title-wrapper {
+          margin: 1%; }
+          body .container main #card-column .card-title-wrapper h1 {
             padding: 0%;
-            border: 1px blue solid;
             margin: 0%; }
-          body .container main .card-wrapper .card-title-wrapper p {
+          body .container main #card-column .card-title-wrapper p {
             width: 20%;
-            background-color: gray;
-            padding: 1%;
-            border: 1px blue solid;
-            margin: 0%; }
-        body .container main .card-wrapper .card-content-wrapper {
-          background-color: #666666;
-          padding: 1%;
-          border: 1px blue solid;
-          max-height: 170px;
+            margin: 0%;
+            margin-top: 5px; }
+        body .container main #card-column .card-content-wrapper {
+          margin: 0% 5px;
+          margin-bottom: 5px;
+          max-height: 200px;
           display: flex; }
-          body .container main .card-wrapper .card-content-wrapper .img-wrapper {
-            background-color: gray;
-            padding: 1%;
-            border: 1px blue solid;
-            width: 170px;
-            max-height: 120px;
-            min-height: 120px;
+          @media only screen and (max-width: 380px) {
+            body .container main #card-column .card-content-wrapper {
+              flex-direction: column;
+              max-height: 100%; } }
+          body .container main #card-column .card-content-wrapper .img-wrapper {
+            flex: 1;
+            min-height: 100px;
+            max-width: 200px;
+            min-width: 200px;
             word-wrap: none; }
-            body .container main .card-wrapper .card-content-wrapper .img-wrapper img {
-              background-color: #999999;
-              padding: 1%;
-              border: 1px blue solid;
-              min-width: 98%;
-              max-width: 99%;
-              min-height: 98%;
-              height: 99%; }
-          body .container main .card-wrapper .card-content-wrapper .txt-wrapper {
+            @media only screen and (max-width: 380px) {
+              body .container main #card-column .card-content-wrapper .img-wrapper {
+                max-width: 100%;
+                max-height: 100%; } }
+            body .container main #card-column .card-content-wrapper .img-wrapper img {
+              min-width: 100%;
+              max-width: 100%;
+              min-height: 100%;
+              max-height: 100%; }
+          body .container main #card-column .card-content-wrapper .txt-wrapper {
             flex: 2;
-            background-color: gray;
-            padding: 1%;
-            border: 1px blue solid;
-            max-height: 120px;
+            max-height: 100%;
             display: flex;
+            padding-top: 1%;
             justify-content: flex-start;
             flex-direction: column; }
-            body .container main .card-wrapper .card-content-wrapper .txt-wrapper p {
-              background-color: #999999;
+            body .container main #card-column .card-content-wrapper .txt-wrapper p {
               padding: 1%;
-              border: 1px blue solid;
+              padding-top: 0%;
               word-break: none;
               max-height: 100px;
               overflow: hidden;
-              margin: 1%; }
-        body .container main .card-wrapper .card-button-wrapper {
-          background-color: #666666;
-          padding: 1%;
+              width: 98%;
+              margin: 1%;
+              margin-top: 0%; }
+        body .container main #card-column .card-button-wrapper {
           display: flex;
-          border: 1px blue solid; }
-          body .container main .card-wrapper .card-button-wrapper i {
-            font-size: 1.5rem;
-            border: 1px blue solid; }
-          body .container main .card-wrapper .card-button-wrapper .left {
-            background-color: gray;
-            padding: 1%;
+          border-top: 1px solid black;
+          padding: 5px; }
+          body .container main #card-column .card-button-wrapper i {
+            font-size: 1.5rem; }
+          body .container main #card-column .card-button-wrapper button {
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            cursor: pointer; }
+          body .container main #card-column .card-button-wrapper .left {
             display: flex;
             flex: 1;
-            border: 1px blue solid; }
-            body .container main .card-wrapper .card-button-wrapper .left button {
-              background-color: #999999;
-              padding: 1%;
-              border: 1px blue solid; }
-              body .container main .card-wrapper .card-button-wrapper .left button i {
-                border: 1px blue solid; }
-          body .container main .card-wrapper .card-button-wrapper .right {
-            background-color: gray;
-            padding: 1%;
+            flex-shrink: 0; }
+            body .container main #card-column .card-button-wrapper .left button {
+              background-color: #e6e6e6;
+              border: 1px black solid;
+              padding: 5px; }
+              body .container main #card-column .card-button-wrapper .left button:hover {
+                background-color: #1a1a1a;
+                color: white; }
+              body .container main #card-column .card-button-wrapper .left button:last-of-type {
+                margin-left: 5px;
+                margin-right: 10px; }
+              body .container main #card-column .card-button-wrapper .left button i {
+                margin-right: 6px; }
+          body .container main #card-column .card-button-wrapper .right {
             flex: 1;
+            flex-shrink: 2;
             display: flex;
-            justify-content: flex-end;
-            border: 1px blue solid; }
-            body .container main .card-wrapper .card-button-wrapper .right button {
-              background-color: #999999;
-              padding: 1%;
-              border: 1px blue solid; }
-              body .container main .card-wrapper .card-button-wrapper .right button i {
-                border: 1px blue solid; }
-      body .container main #card-row {
+            justify-content: flex-end; }
+            body .container main #card-column .card-button-wrapper .right button {
+              background-color: #e6e6e6;
+              border: 1px black solid;
+              padding: 5px; }
+              body .container main #card-column .card-button-wrapper .right button:hover {
+                background-color: #1a1a1a;
+                color: white; }
+              body .container main #card-column .card-button-wrapper .right button i {
+                margin-right: 6px; }
+      body .container main #card-column-v2 {
         display: flex;
-        flex-direction: row; }
-      body .container main #card-column {
-        display: flex;
-        flex-direction: column; }
+        flex-direction: column;
+        width: 60%;
+        background-color: #e6e6e6;
+        border-radius: 5px; }
+        @media only screen and (max-width: 840px) {
+          body .container main #card-column-v2 {
+            width: 70%; } }
+        @media only screen and (max-width: 650px) {
+          body .container main #card-column-v2 {
+            width: 90%; } }
+        @media only screen and (max-width: 340px) {
+          body .container main #card-column-v2 {
+            width: 95%; } }
+        body .container main #card-column-v2 .card-content-wrapper {
+          margin: 5px 5px;
+          margin-bottom: 5px;
+          max-height: 200px;
+          display: flex; }
+          @media only screen and (max-width: 380px) {
+            body .container main #card-column-v2 .card-content-wrapper {
+              flex-direction: column;
+              max-height: 100%; } }
+          body .container main #card-column-v2 .card-content-wrapper .img-wrapper {
+            max-height: 120px;
+            min-height: 120px;
+            max-width: 200px;
+            min-width: 200px; }
+            @media only screen and (max-width: 380px) {
+              body .container main #card-column-v2 .card-content-wrapper .img-wrapper {
+                max-width: 100%;
+                max-height: 100%; } }
+            body .container main #card-column-v2 .card-content-wrapper .img-wrapper img {
+              min-width: 100%;
+              max-width: 100%;
+              min-height: 100%;
+              max-height: 100%; }
+          body .container main #card-column-v2 .card-content-wrapper .txt-wrapper {
+            flex: 1;
+            padding-top: 0%;
+            width: 100%;
+            min-width: 0; }
+            body .container main #card-column-v2 .card-content-wrapper .txt-wrapper .card-title-wrapper {
+              margin: 0%;
+              padding: 5px;
+              padding-top: 0px;
+              display: flex;
+              flex-direction: column;
+              table-layout: fixed;
+              width: 100%; }
+              body .container main #card-column-v2 .card-content-wrapper .txt-wrapper .card-title-wrapper h1 {
+                padding: 0%;
+                margin: 0%;
+                display: table-cell;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden; }
+              body .container main #card-column-v2 .card-content-wrapper .txt-wrapper .card-title-wrapper p {
+                width: 100%;
+                margin: 0%;
+                margin-top: 5px;
+                padding: 0%;
+                display: table-cell;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden; }
+        body .container main #card-column-v2 .card-button-wrapper {
+          display: flex;
+          border-top: 1px solid black;
+          padding-top: 5px;
+          padding: 5px; }
+          body .container main #card-column-v2 .card-button-wrapper i {
+            font-size: 1.5rem; }
+          body .container main #card-column-v2 .card-button-wrapper button {
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            cursor: pointer; }
+          body .container main #card-column-v2 .card-button-wrapper .left {
+            display: flex;
+            flex: 1;
+            flex-shrink: 0; }
+            body .container main #card-column-v2 .card-button-wrapper .left button {
+              background-color: #e6e6e6;
+              border: 1px black solid;
+              padding: 5px; }
+              body .container main #card-column-v2 .card-button-wrapper .left button:hover {
+                background-color: #1a1a1a;
+                color: white; }
+              body .container main #card-column-v2 .card-button-wrapper .left button:last-of-type {
+                margin-left: 5px;
+                margin-right: 10px; }
+              body .container main #card-column-v2 .card-button-wrapper .left button i {
+                margin-right: 6px; }
+          body .container main #card-column-v2 .card-button-wrapper .right {
+            flex: 1;
+            flex-shrink: 2;
+            display: flex;
+            justify-content: flex-end; }
+            body .container main #card-column-v2 .card-button-wrapper .right button {
+              background-color: #e6e6e6;
+              border: 1px black solid;
+              padding: 5px; }
+              body .container main #card-column-v2 .card-button-wrapper .right button:hover {
+                background-color: #1a1a1a;
+                color: white; }
+              body .container main #card-column-v2 .card-button-wrapper .right button i {
+                margin-right: 6px; }
+      body .container main .card-wrapper:not(:last-of-type) {
+        margin-bottom: 2%; }
+      body .container main .card-wrapper:last-of-type {
+        margin-bottom: 10%; }
     body .container footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin: 1% 0%;
-      margin-top: auto;
-      background-color: #333333;
-      padding: 1%;
-      border: 1px blue solid; }
+      margin: 0% 0%;
+      background-color: #1a1a1a;
+      padding: 1% 2%; }
       body .container footer .txt-wrapper {
-        flex: 1;
-        background-color: #4d4d4d;
-        padding: 1%;
-        border: 1px blue solid; }
+        flex: 1; }
         body .container footer .txt-wrapper p {
-          background-color: #666666;
-          padding: 1%;
-          border: 1px blue solid; }
+          color: white; }
       body .container footer .links {
         flex: 1;
         display: flex;
-        justify-content: flex-end;
-        background-color: #4d4d4d;
-        padding: 1%;
-        border: 1px blue solid; }
+        justify-content: flex-end; }
         body .container footer .links i {
-          background-color: #006666;
           font-size: 2rem;
-          margin: 1%;
-          border: 1px blue solid; }
+          margin: 9px;
+          color: white; }
