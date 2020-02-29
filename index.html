@@ -9,36 +9,41 @@
     <title>Beckspace</title>
 </head>
 <body>
-    <div class="mobile-nav hide">
-        <div class="flex-wrapper">
-            <a href="" class="current">Home</a>
-            <a href="">About</a>
-            <a href="">Themes</a>
-            <a href="">Services</a>
-            <a href="">Contact</a>
-        </div>
-    </div>
     <div class="container">
         <header>
-            <div class="name">
-                <h1><i class="fab fa-github"></i> Beckspace.ca</h1>
+            <div class="absolute-nav-wrap">
+                <div class="nav-wrap">
+                    <div class="name">
+                        <h1><i class="fab fa-github"></i> Beckspace.ca</h1>
+                    </div>
+                    <div class="mobile-nav-button">
+                        <i class="fas fa-bars mobile-nav-button-icon"></i>            
+                    </div>
+                    <nav>
+                        <a href="" class="current">Home</a>
+                        <a href="">About</a>
+                        <a href="">Themes</a>
+                        <a href="">Services</a>
+                        <a href="">Contact</a>
+                    </nav>
+                </div>
+                <div class="mobile-nav hide">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="flex-wrapper">
+                        <a href="" class="current">Home</a>
+                        <a href="">About</a>
+                        <a href="">Themes</a>
+                        <a href="">Services</a>
+                        <a href="">Contact</a>
+                    </div>
+                </div>
             </div>
-            <div class="mobile-nav-button">
-                <i class="fas fa-bars mobile-nav-button-icon"></i>            
-            </div>
-            <nav>
-                <a href="" class="current">Home</a>
-                <a href="">About</a>
-                <a href="">Themes</a>
-                <a href="">Services</a>
-                <a href="">Contact</a>
-            </nav>
-        </header>
-        <div class="banner">
+            <div class="banner">
 
-        </div>
-        <main>
-            <div id="card-row"class="card-wrapper">
+            </div>
+            <div id="banner-cards">
                 <div class="card">
                     <i class="fab fa-github"></i>
                     <p>consectetur</p>
@@ -52,7 +57,9 @@
                     <p>lorem</p>
                 </div>
             </div>
-            <div class="card-gallery-wrapper">
+        </header>
+        <main>
+            <div id="card-v4-gallery">
                 <div id="card-column-v3" >
                     <div class="card-content-wrapper">
                         <div class="card-title-wrapper">
@@ -126,7 +133,7 @@
                     </div>
                 </div>
             </div>
-            <div id="card-column-v2"class="card-wrapper">
+            <div id="card-v3-sleek">
                 <div class="card-content-wrapper">
                     <div class="img-wrapper">
                         <img src="img/beach-1.jpg" alt="">
@@ -149,7 +156,7 @@
                     </div>
                 </div>
             </div>
-            <div id="card-column"class="card-wrapper">
+            <div id="card-v2-buttons">
                 <div class="card-title-wrapper">
                     <h1>Project Name</h1>
                     <p>07/08/1993</p>
@@ -172,7 +179,7 @@
                     </div>
                 </div>
             </div>
-            <div id="card-column"class="card-wrapper">
+            <div id="card-v1-simple">
                 <div class="card-title-wrapper">
                     <h1>Project Name</h1>
                     <p>07/08/1993</p>
@@ -203,8 +210,8 @@
         $(document).ready(function(){
             $(".mobile-nav-button-icon").click(function(){
                 $(".mobile-nav").animate({
-                    "width": ["toggle", "swing"],
-                },500);
+                    "width": "toggle",
+                },300);
             });
         });
     </script>
